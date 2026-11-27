@@ -9,26 +9,25 @@
 .workspace{display:block}
 .sidebar{min-width:0}
 .study-column{min-width:0}
-@media (orientation:landscape) and (min-width:500px){
-  html,body{height:100%;overflow:hidden}
-  .app{max-width:none;width:100%;height:100vh;height:100dvh;padding:12px 18px;display:flex;flex-direction:column;overflow:hidden}
-  .workspace{display:grid;grid-template-columns:minmax(245px,27vw) minmax(0,1fr);gap:16px;flex:1;min-height:0;overflow:hidden}
-  .sidebar{position:sticky;top:0;align-self:start;max-height:100%;overflow-y:auto;overscroll-behavior:contain;padding-right:2px}
-  .sidebar .card{margin:0 0 10px;padding:12px}
-  .sidebar .hero img{width:min(100%,190px)!important;max-height:210px;object-fit:contain}
-  .sidebar h1{font-size:22px}
-  .sidebar h2{font-size:16px}
-  .sidebar .moods{display:grid;grid-template-columns:1fr 1fr}
-  .sidebar .moods .btn{padding:8px 6px;font-size:13px}
-  .sidebar .toast{padding:10px;font-size:13px}
-  .study-column{min-height:0;height:100%;overflow-y:auto;overscroll-behavior:contain;padding:0 8px 12px 0}
-  .study-column>.card{margin:0 0 12px}
-  .study-column #subjects{align-items:stretch}
-  .foot{padding:5px 0 0;flex:none}
+@media (orientation:landscape){
+  html,body{min-height:100%;height:100%;}
+  .app{max-width:none;width:100%;min-height:100dvh;padding:12px 18px;display:flex;flex-direction:column;}
+  .workspace{display:grid;grid-template-columns:minmax(220px,27vw) minmax(0,1fr);gap:16px;align-items:start;}
+  .sidebar{min-width:0;position:sticky;top:8px;align-self:start;max-height:calc(100dvh - 24px);overflow-y:auto;}
+  .study-column{min-width:0;max-height:calc(100dvh - 24px);overflow-y:auto;}
+  .sidebar .hero img{max-width:100%;height:auto;object-fit:contain;}
 }
 @media (orientation:portrait){
   .workspace{display:block}
+  .sidebar,.study-column{max-height:none;overflow:visible;position:static}
 }
+/* Respaldo para navegadores Android que reportan mal orientation:landscape. */
+html.is-landscape .workspace{display:grid;grid-template-columns:minmax(220px,27vw) minmax(0,1fr);gap:16px;align-items:start}
+html.is-landscape .app{max-width:none;width:100%;min-height:100dvh;padding:12px 18px;display:flex;flex-direction:column}
+html.is-landscape .sidebar{min-width:0;position:sticky;top:8px;align-self:start;max-height:calc(100dvh - 24px);overflow-y:auto}
+html.is-landscape .study-column{min-width:0;max-height:calc(100dvh - 24px);overflow-y:auto}
+html.is-portrait .workspace{display:block}
+html.is-portrait .sidebar,html.is-portrait .study-column{max-height:none;overflow:visible;position:static}
 </style></head><body><main class="app">
 <section id="installHelp" class="card" style="display:none;text-align:center">
 <b>Instala Areola en tu móvil</b><p class="tag">Abre el menú del navegador y pulsa «Añadir a pantalla de inicio» o «Instalar aplicación».</p>
@@ -194,4 +193,18 @@ document.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>{let i=+b.dat
 $("search").addEventListener("input",render);
 document.querySelectorAll("[data-mood]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-mood]").forEach(x=>x.classList.toggle("active",x===b));let mood=b.dataset.mood;let list=[...moodLines[mood].map(cleanAdvice),...extraMoodLines[mood]];let entry=cyclePick("areola_advice_cycle_"+mood,list);showMessage(entry,cyclePick("areola_song_cycle_"+mood,[...moodSongs[mood],...songs]));});
 render();
-</script></body></html>
+</script>
+<script>
+(function(){
+  function updateAreolaOrientation(){
+    var landscape=window.innerWidth>window.innerHeight;
+    document.documentElement.classList.toggle('is-landscape',landscape);
+    document.documentElement.classList.toggle('is-portrait',!landscape);
+  }
+  updateAreolaOrientation();
+  window.addEventListener('resize',updateAreolaOrientation,{passive:true});
+  window.addEventListener('orientationchange',updateAreolaOrientation,{passive:true});
+  if(window.visualViewport){window.visualViewport.addEventListener('resize',updateAreolaOrientation,{passive:true});}
+})();
+</script>
+</body></html>
