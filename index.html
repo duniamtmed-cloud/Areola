@@ -2,7 +2,7 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff4ec"><meta name="description" content="Areola, tu study tracker"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/icon-192.png"><title>Areola · Study tracker</title>
 <style>
 :root{--ink:#332b32;--muted:#887b82;--paper:#fffaf7;--line:#f0e2dc;--pink:#f3b5c8;--orange:#e99548;--lilac:#c9b8ef}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#fff4ec,#f9eff8);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}.app{max-width:900px;margin:auto;padding:16px}.card{background:#ffffffd9;border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 5px 20px #5d30400a}.hero{display:flex;gap:15px;align-items:center}.cat{width:120px;min-width:105px}.cat svg{width:100%;height:auto}.tag{font-size:12px;color:var(--muted)}h1{font-size:25px;margin:0}h2{font-size:18px;margin:0 0 10px}.moods,.subjects{display:flex;flex-wrap:wrap;gap:8px}.btn,.subject,.round{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--ink);font:inherit;cursor:pointer}.btn.active,.subject.active{outline:2px solid #c18ab1;background:#fff4fa}.subject{flex:1 1 130px;text-align:left;border:2.5px solid var(--edge);background:var(--pale);border-radius:16px}.subject.farma{border:2.5px solid #64518f;background:linear-gradient(110deg,#f1eaff,#eaf2ff)}.subject small{display:block;color:var(--muted)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.big{font-size:26px;font-weight:750}.bar{height:9px;border-radius:20px;background:#eee5e4;overflow:hidden;margin-top:8px}.fill{height:100%;background:linear-gradient(90deg,#e87976,#69b887);width:0;transition:width .2s}.search{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}.topic{padding:13px 0;border-bottom:1px solid var(--line)}.topic:last-child{border:0}.topic-title{font-weight:650}.rounds{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.round{width:34px;height:34px;padding:0;font-size:13px}.round.done{background:#79b98c;color:white;border-color:#79b98c}.topicfoot{display:flex;justify-content:space-between;gap:10px;align-items:center}.status{font-size:12px;color:var(--muted)}.toast{background:#fff2f8;border:1px solid #f1cddd;border-radius:14px;padding:12px;margin-top:10px}.song{font-weight:700}.foot{font-size:12px;color:var(--muted);text-align:center;padding:15px}.hidden{display:none}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#fff4ec,#f9eff8);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}.app{max-width:900px;margin:auto;padding:16px}.card{background:#ffffffd9;border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 5px 20px #5d30400a}.hero{display:flex;gap:15px;align-items:center}.cat{width:120px;min-width:105px}.cat svg{width:100%;height:auto}.tag{font-size:12px;color:var(--muted)}h1{font-size:25px;margin:0}h2{font-size:18px;margin:0 0 10px}.moods,.subjects{display:flex;flex-wrap:wrap;gap:8px}.btn,.subject,.round{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--ink);font:inherit;cursor:pointer}.btn.active,.subject.active{outline:2px solid #c18ab1;background:#fff4fa}.subject{flex:1 1 130px;text-align:left;border:2.5px solid var(--edge);background:var(--pale);border-radius:16px}.subject.farma{border:2.5px solid #64518f;background:linear-gradient(110deg,#f1eaff,#eaf2ff)}.subject small{display:block;color:var(--muted)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.big{font-size:26px;font-weight:750}.bar{height:9px;border-radius:20px;background:#eee5e4;overflow:hidden;margin-top:8px}.fill{height:100%;background:linear-gradient(90deg,#e87976,#69b887);width:0;transition:width .2s}.search{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}.topic{padding:13px 0;border-bottom:1px solid var(--line)}.topic:last-child{border:0}.topic-title{font-weight:650}.rounds{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.round-wrap{display:inline-flex;align-items:center;gap:2px}.note-btn{width:25px;height:34px;padding:0;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--muted);font:13px system-ui;cursor:pointer}.note-btn.has-note{color:#a64e82;background:#fff0f7;border-color:#e8bfd2}.note-dialog{width:min(92vw,520px);border:1px solid var(--line);border-radius:18px;padding:18px;background:#fffaf7;color:var(--ink);box-shadow:0 12px 50px #332b3240}.note-dialog::backdrop{background:#241b2480}.note-dialog textarea{width:100%;min-height:180px;resize:vertical;border:1px solid var(--line);border-radius:12px;padding:12px;font:14px/1.5 system-ui;background:white;color:var(--ink)}.note-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.round{width:34px;height:34px;padding:0;font-size:13px}.round.done{background:#79b98c;color:white;border-color:#79b98c}.topicfoot{display:flex;justify-content:space-between;gap:10px;align-items:center}.status{font-size:12px;color:var(--muted)}.toast{background:#fff2f8;border:1px solid #f1cddd;border-radius:14px;padding:12px;margin-top:10px}.song{font-weight:700}.foot{font-size:12px;color:var(--muted);text-align:center;padding:15px}.hidden{display:none}
 @media(max-width:520px){.app{padding:10px}.hero{align-items:center}.cat{width:100%;min-width:0}.stats{grid-template-columns:1fr 1fr}.card{padding:13px}}
 
 /* Vista adaptable: en horizontal, mood a la izquierda y estudio a la derecha. */
@@ -48,6 +48,12 @@ html.is-portrait .sidebar,html.is-portrait .study-column{max-height:none;overflo
 </section>
 </div>
 <div class="foot">Las marcas se guardan en este navegador y dispositivo. Cada tema tiene siete casillas. Canciones: títulos y artistas, sin letras.</div>
+<dialog id="noteDialog" class="note-dialog">
+  <h2 id="noteTitle">Notas de la vuelta</h2>
+  <p class="tag">Apunta qué has hecho, qué te ha costado o qué quieres repasar en esta vuelta.</p>
+  <textarea id="roundNote" placeholder="En esta vuelta he…"></textarea>
+  <div class="note-actions"><button class="btn" type="button" id="cancelNote">Cancelar</button><button class="btn" type="button" id="saveNote" style="background:#fff0f7;border-color:#e8bfd2">Guardar nota</button></div>
+</dialog>
 </main>
 <script>
 const subjects=[
@@ -135,7 +141,7 @@ const jokes=[
 [/hèrnia|hernia/i,["La pared abdominal intentando mantener la compostura y aparece una hernia: plot twist anatómico."]],
 [/hemorràgia|hemorragia/i,["La hemostasia entra en el chat y pregunta quién ha dejado salir la sangre de la conversación."]],
 [/litiasi|coledocolitiasis/i,["El cálculo biliar: pequeño tamaño, energía de villano principal."]],
-[/renal|nefro|uro/i,["El riñón tiene dos unidades y una capacidad infinita para aparecer en preguntas tipo test."]]
+[/renal|nefro|uro/i,["El riñón tiene dos unidades y una capacidad infinita para aparecer en preguntas tipo test."]],
 [/insuficiència renal aguda|ira|insuficiència renal crònica|malaltia renal crònica/i,["El FG cuando le pides que se mantenga constante: «estoy haciendo lo que puedo con los datos que me das». Tú repasa autorregulación.","La creatinina viendo que la vuelves a medir: «otra vez yo siendo el KPI de este riñón». ","El riñón en la IRA: tres etiologías y un examen empeñado en que no confundas ninguna. Plot twist: prerrenal, renal o posrenal."]],
 [/síndrome nefròtica|síndrome nefrítica|nefròtica|nefrítica/i,["La nefrótica y la nefrítica en el mismo examen: dos vibes distintas, mismo objetivo de confundirte. Hoy no, reina.","La proteinuria masiva entrando en escena: el glomérulo ha dejado el grupo sin avisar.","El edema preguntando si puede quedarse: «solo vengo por la albúmina». "]],
 [/tubular|fanconi|bartter|acidosi tubular|diabetis insípida/i,["El túbulo renal viendo que le toca otro síndrome: «¿pero cuántas funciones tengo que cubrir en esta empresa?»","Bartter y Gitelman en el mismo tema: primos que comparten electrolitos y confunden al personal.","El túbulo proximal haciendo multitasking y el examen preguntando justo por el transportador menos obvio."]],
@@ -171,6 +177,35 @@ const jokes=[
 [/neuro|neurona|mielina|sinapsi|medul·la/i,["La mielina cuando aparece una enfermedad desmielinizante: se acabó el contrato, reina.","La microglía viendo algo raro: quién ha sido y por qué está en mi sistema nervioso.","La neurona intentando transmitir el potencial de acción mientras tú intentas transmitir el tema a tu memoria."]]
 
 ];
+// Chistes extra por contenido para que siempre haya una referencia reconocible.
+jokes.unshift(
+ [/nefro|renal|glomerul|túbulo|tubular|proteinúria|filtrat glomerular/i,[
+  "El túbulo proximal haciendo el 65 % del trabajo renal y encima sin cobrar horas extra. Literalmente yo en época de exámenes.",
+  "La ADH cuando llevas dos horas sin beber agua: te voy a tener que controlar porque tú sola no puedes.",
+  "El síndrome nefrótico perdiendo proteínas como si fueran seguidores.",
+  "El glomérulo viendo otra pregunta de autorregulación: otra vez tengo que mantener el filtrado yo sola."
+ ]],
+ [/cardio|cor|miocardi|vàlvula|hemodinàmica|electrocardiograma|arítmi/i,[
+  "El nodo SA: soy el protagonista. El nodo AV: bro, llevas tres segundos sin hacer nada, me toca.",
+  "El ventrículo izquierdo viendo la poscarga: hoy no es mi día, chicas.",
+  "La insuficiencia cardíaca intentando mantener el gasto cardíaco: delulu is the solulu."
+ ]],
+ [/farmacologia|farmacoteràpia|farmacocinètica|farmacodinàmica|cyp450|receptor|agonista|antagonista/i,[
+  "El CYP450 cuando llega un paciente polimedicado: no me pagan suficiente para este lore.",
+  "La warfarina cuando alguien cambia su dieta: ¿PERDONA? ¿Y A MÍ QUIÉN ME AVISA?",
+  "El receptor cuando aparece un agonista parcial: ¿vas a activar o no vas a activar? decide tu marca personal."
+ ]],
+ [/histologia|epiteli|teixit|microscòpic|cèl·lula/i,[
+  "El epitelio pseudoestratificado cuando le dicen que parece tener varias capas: no me etiquetes, estoy en mi proceso.",
+  "El tejido conectivo sosteniendo a todo el mundo y sin recibir el reconocimiento que merece.",
+  "La célula caliciforme viendo que otra vez solo preguntan por el moco: también tengo sentimientos."
+ ]],
+ [/neuro|neurona|mielina|sinapsi|medul·la|nerviós/i,[
+  "La microglía viendo algo raro: quién ha sido y por qué está en mi sistema nervioso.",
+  "La mielina cuando aparece una enfermedad desmielinizante: se acabó el contrato, reina.",
+  "La neurona intentando transmitir el potencial de acción mientras tú intentas transmitir el tema a tu memoria."
+ ]]
+);
 const key="areolaTracker_v3";let state={};try{state=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){}let selected=0;
 const $=id=>document.getElementById(id),save=()=>localStorage.setItem(key,JSON.stringify(state)),k=(s,i)=>s+"_"+i;
 function get(s,i){return state[k(s,i)]||{rounds:Array(7).fill(false)}}
@@ -178,7 +213,20 @@ function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;","
 function total(){return subjects.reduce((a,s)=>a+s.topics.length*7,0)}
 function done(){return subjects.reduce((a,s)=>a+s.topics.reduce((b,t,i)=>b+get(s.name,i).rounds.filter(Boolean).length,0),0)}
 function pct(x){return Math.round(x*100)}
-function jokeFor(s,t,i){let choices=jokes.find(x=>x[0].test(t));if(!choices){let fall={"Digestivo":["El tubo digestivo tiene más giros argumentales que una romcom de 2004."],"Rayos":["La imagen es preciosa, pero Areola pregunta: ¿cuál es el hallazgo y cómo cambia tu diagnóstico?"],"Onco":["El comité multidisciplinar viendo otro caso: «esto da para una reunión de tres temporadas»."],"Urgencias":["En Urgencias, el diagnóstico diferencial es el reparto completo; toca priorizar protagonistas."],"Nefro":["El glomérulo tiene una capacidad increíble para convertir una pregunta sencilla en una saga."],"Farma":["Farmacología: mecanismo, receptor y efectos. El examen nunca deja que sea solo un crush de una noche."]};choices=[null,fall[s]||["Areola ha revisado el tema y exige una vuelta más."]]}return choices[1][(i+get(s,i).rounds.filter(Boolean).length)%choices[1].length]}
+function jokeFor(s,t,i){
+ let match=jokes.find(x=>x[0].test(t));
+ let fallback={
+  "Digestivo":["El tubo digestivo tiene más giros argumentales que una romcom de 2004.","El intestino viendo el temario completo: esto no era una digestión, era una saga."],
+  "Rayos":["La imagen es preciosa, pero Areola pregunta: ¿cuál es el hallazgo y cómo cambia tu diagnóstico?","El corte axial girado 180 grados: el plot twist que nadie pidió."],
+  "Onco":["El comité multidisciplinar viendo otro caso: esto da para una reunión de tres temporadas.","El tumor intentando ser el protagonista y tú preguntando por biomarcadores. Main character energy."],
+  "Urgencias":["En Urgencias, el diagnóstico diferencial es el reparto completo; toca priorizar protagonistas.","El caso clínico entrando sin presentación: estamos en The Pitt, no hay recap."],
+  "Nefro-Uro":["El glomérulo tiene una capacidad increíble para convertir una pregunta sencilla en una saga.","El túbulo proximal haciendo horas extra otra vez. Recursos humanos no contesta."],
+  "Nefro":["El glomérulo tiene una capacidad increíble para convertir una pregunta sencilla en una saga.","El riñón viendo que hay siete vueltas por tema: ¿y mi convenio laboral?"],
+  "Farma":["Farmacología: mecanismo, receptor y efectos. El examen nunca deja que sea solo un crush de una noche.","El CYP450 ha visto tu lista de fármacos y ha cerrado sesión."]
+ };
+ let list=match?match[1]:(fallback[s]||["Areola ha revisado esta vuelta y confirma: el temario tiene demasiado lore.","El examen preguntando justo el dato que habías dejado para la última vuelta: comportamiento de villano."]);
+ return list[(i+get(s,i).rounds.filter(Boolean).length-1)%list.length];
+}
 function showMessage(msg,song){$("moodline").textContent=cleanAdvice(msg);if(song){$("songbox").style.display="block";$("song").textContent=song[0]+" — "+song[1];$("songwhy").textContent=song[2]}}
 function render(){let n=done(),t=total(),p=pct(n/t);$("pct").textContent=p+"%";$("globalbar").style.width=p+"%";
 $("subjects").innerHTML=subjects.map((s,i)=>{let d=s.topics.reduce((a,x,j)=>a+get(s.name,j).rounds.filter(Boolean).length,0),q=pct(d/(s.topics.length*7));const logos={"Digestivo":"🫁","Rayos":"☢️","Radiología":"☢️","Onco":"🎗️","Oncología":"🎗️","Urgencias":"🚨","Nefro-Uro":"🫘","Nefro":"🫘","Farma":"💊"};
@@ -187,9 +235,27 @@ const pale={"Digestivo":"#e8f4e9","Rayos":"#fff5ce","Radiología":"#fff5ce","Onc
 return `<button class="subject ${selected===i?"active":""} ${s.name==="Farma"?"farma":""}" data-sub="${i}" style="--c:${s.color};--edge:${edges[s.name]||s.color};--pale:${pale[s.name]||"#f5f5f5"}"><b><span aria-hidden="true" style="font-size:23px;vertical-align:middle;margin-right:9px">${logos[s.name]||"📚"}</span>${s.name}</b><small>${q}% completado</small></button>`}).join("");
 document.querySelectorAll("[data-sub]").forEach(b=>b.onclick=()=>{selected=+b.dataset.sub;render()});
 let s=subjects[selected],sd=s.topics.reduce((a,x,j)=>a+get(s.name,j).rounds.filter(Boolean).length,0),sp=pct(sd/(s.topics.length*7));$("subjectname").textContent=s.name;$("subpercent").textContent=sp+"% de progreso";$("subbar").style.width=sp+"%";
-let q=$("search").value.toLowerCase();$("topics").innerHTML=s.topics.map((t,i)=>({t,i})).filter(x=>x.t.toLowerCase().includes(q)).map(({t,i})=>{let d=get(s.name,i),c=d.rounds.filter(Boolean).length;return `<div class="topic"><div class="topic-title">${escapeHTML(t)}</div><div class="rounds">${d.rounds.map((v,j)=>`<button class="round ${v?"done":""}" data-topic="${i}" data-round="${j}" aria-label="Vuelta ${j+1} ${v?"hecha":"pendiente"}">${v?"✓":j+1}</button>`).join("")}</div></div>`}).join("")||'<p class="tag">No hay temas con esa búsqueda.</p>';
+let q=$("search").value.toLowerCase();$("topics").innerHTML=s.topics.map((t,i)=>({t,i})).filter(x=>x.t.toLowerCase().includes(q)).map(({t,i})=>{let d=get(s.name,i),c=d.rounds.filter(Boolean).length;return `<div class="topic"><div class="topic-title">${escapeHTML(t)}</div><div class="rounds">${d.rounds.map((v,j)=>{let note=(d.notes&&d.notes[j])||"";return `<span class="round-wrap"><button class="round ${v?"done":""}" data-topic="${i}" data-round="${j}" aria-label="Vuelta ${j+1} ${v?"hecha":"pendiente"}">${v?"✓":j+1}</button><button class="note-btn ${note.trim()?"has-note":""}" data-note-topic="${i}" data-note-round="${j}" aria-label="Notas de la vuelta ${j+1}" title="Notas de la vuelta ${j+1}">${note.trim()?"📝":"＋"}</button></span>`}).join("")}</div></div>`}).join("")||'<p class="tag">No hay temas con esa búsqueda.</p>';
 document.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>{let i=+b.dataset.topic,j=+b.dataset.round,d=get(s.name,i);if(d.rounds[j]){d.rounds[j]=false;state[k(s.name,i)]=d;save();render();return}d.rounds[j]=true;state[k(s.name,i)]=d;save();render();let line=jokeFor(s.name,s.topics[i],j);showMessage(line);});
+ document.querySelectorAll("[data-note-topic]").forEach(b=>b.onclick=()=>openRoundNote(s.name,+b.dataset.noteTopic,+b.dataset.noteRound));
 }
+let noteTarget=null;
+function openRoundNote(subjectName,topicIndex,roundIndex){
+ noteTarget={subjectName,topicIndex,roundIndex};
+ let data=get(subjectName,topicIndex);if(!data.notes)data.notes={};
+ $("noteTitle").textContent=`${subjectName} · Vuelta ${roundIndex+1}`;
+ $("roundNote").value=data.notes[roundIndex]||"";
+ $("noteDialog").showModal();
+}
+$("saveNote").addEventListener("click",()=>{
+ if(!noteTarget)return;
+ let {subjectName,topicIndex,roundIndex}=noteTarget;
+ let data=get(subjectName,topicIndex);if(!data.notes)data.notes={};
+ let value=$("roundNote").value;
+ if(value.trim())data.notes[roundIndex]=value;else delete data.notes[roundIndex];
+ state[k(subjectName,topicIndex)]=data;save();$("noteDialog").close();noteTarget=null;render();
+});
+$("cancelNote").addEventListener("click",()=>{$("noteDialog").close();noteTarget=null;});
 $("search").addEventListener("input",render);
 document.querySelectorAll("[data-mood]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-mood]").forEach(x=>x.classList.toggle("active",x===b));let mood=b.dataset.mood;let list=[...moodLines[mood].map(cleanAdvice),...extraMoodLines[mood]];let entry=cyclePick("areola_advice_cycle_"+mood,list);showMessage(entry,cyclePick("areola_song_cycle_"+mood,[...moodSongs[mood],...songs]));});
 render();
